@@ -97,6 +97,10 @@ img { max-width: 100%; height: auto; }
 /* 主体 */
 .site-main { padding: 36px 20px 56px; }
 
+/* 首页头图 */
+.hero { margin: 4px 0 30px; }
+.hero__img { display: block; width: 100%; border-radius: 18px; box-shadow: var(--shadow); }
+
 /* 首页 */
 .lead { font-size: 1.02rem; color: var(--muted); line-height: 1.9; margin: 0 0 36px; }
 .lead strong { color: var(--fg); }
