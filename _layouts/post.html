@@ -108,22 +108,16 @@ layout: default
 
     <footer class="post__footer">
       {% if lang == 'en' %}
-        <a class="btn btn--primary" href="https://www.tonbovpn.com/en/">🎁 200MB Free Daily · Try TonBo VPN</a>
         <a class="btn btn--ghost" href="{{ '/en/' | relative_url }}">← Back to Home</a>
       {% elsif lang == 'vi' %}
-        <a class="btn btn--primary" href="https://www.tonbovpn.com/vi/">🎁 200MB miễn phí mỗi ngày · Thử TonBo VPN</a>
         <a class="btn btn--ghost" href="{{ '/vi/' | relative_url }}">← Trang Chủ</a>
       {% elsif lang == 'ja' %}
-        <a class="btn btn--primary" href="https://www.tonbovpn.com/ja/">🎁 毎日200MB無料 · TonBo VPNを試す</a>
         <a class="btn btn--ghost" href="{{ '/ja/' | relative_url }}">← ホームへ</a>
       {% elsif lang == 'ko' %}
-        <a class="btn btn--primary" href="https://www.tonbovpn.com/ko/">🎁 매일 200MB 무료 · TonBo VPN 체험</a>
         <a class="btn btn--ghost" href="{{ '/ko/' | relative_url }}">← 홈으로</a>
       {% elsif lang == 'tr' %}
-        <a class="btn btn--primary" href="https://www.tonbovpn.com/tr/">🎁 Günlük 200MB Ücretsiz · TonBo VPN Dene</a>
         <a class="btn btn--ghost" href="{{ '/tr/' | relative_url }}">← Ana Sayfa</a>
       {% else %}
-        <a class="btn btn--primary" href="https://www.tonbovpn.com/zh/">🎁 每日 200M 免费 · 立即试用 TonBoVPN</a>
         <a class="btn btn--ghost" href="{{ '/' | relative_url }}">← 返回首页</a>
       {% endif %}
     </footer>
@@ -165,34 +159,34 @@ layout: default
     <div class="sidebar__section sidebar__cta">
       <h3 class="sidebar__title">
         {% case lang %}
-          {% when 'en' %}Try TonBo VPN Free
-          {% when 'vi' %}Dùng thử miễn phí
-          {% when 'ja' %}無料で試す
-          {% when 'ko' %}무료 체험하기
-          {% when 'tr' %}Ücretsiz Deneyin
-          {% else %}免费试用 TonBoVPN
+          {% when 'en' %}TonBo VPN
+          {% when 'vi' %}TonBo VPN
+          {% when 'ja' %}TonBo VPN
+          {% when 'ko' %}TonBo VPN
+          {% when 'tr' %}TonBo VPN
+          {% else %}TonBoVPN 推荐
         {% endcase %}
       </h3>
       <p class="sidebar__cta-text">
         {% case lang %}
-          {% when 'en' %}200MB free daily · No credit card needed · Invite friends, both earn $1
-          {% when 'vi' %}200MB miễn phí/ngày · Không cần thẻ · Mời bạn, cả hai nhận $1
-          {% when 'ja' %}毎日200MB無料 · カード不要 · 招待で双方$1
-          {% when 'ko' %}매일 200MB 무료 · 카드 불필요 · 친구 초대 시 양쪽 $1
-          {% when 'tr' %}Günlük 200MB ücretsiz · Kart gerekmez · Arkadaş davet et, ikiniz $1 kazan
-          {% else %}每日 200M 免费 · 无需信用卡 · 邀请好友双方各得 $1
+          {% when 'en' %}VLESS + Reality protocol · 200MB free daily · No credit card needed
+          {% when 'vi' %}Giao thức VLESS + Reality · 200MB miễn phí/ngày · Không cần thẻ
+          {% when 'ja' %}VLESS + Reality プロトコル · 毎日200MB無料 · カード不要
+          {% when 'ko' %}VLESS + Reality 프로토콜 · 매일 200MB 무료 · 카드 불필요
+          {% when 'tr' %}VLESS + Reality protokolü · Günlük 200MB ücretsiz · Kart gerekmez
+          {% else %}VLESS + Reality 协议 · 每日 200M 免费 · 无需信用卡
         {% endcase %}
       </p>
-      <a class="btn btn--primary sidebar__cta-btn" href="https://www.tonbovpn.com/{% if lang != 'zh' %}{{ lang }}/{% else %}zh/{% endif %}">
+      <p class="sidebar__cta-text" style="word-break:break-all;">
         {% case lang %}
-          {% when 'en' %}Get Started Free →
-          {% when 'vi' %}Dùng thử miễn phí →
-          {% when 'ja' %}無料ではじめる →
-          {% when 'ko' %}무료로 시작하기 →
-          {% when 'tr' %}Ücretsiz Başla →
-          {% else %}免费注册试用 →
+          {% when 'en' %}Search: <strong>tonbovpn.com</strong>
+          {% when 'vi' %}Tìm kiếm: <strong>tonbovpn.com</strong>
+          {% when 'ja' %}検索: <strong>tonbovpn.com</strong>
+          {% when 'ko' %}검색: <strong>tonbovpn.com</strong>
+          {% when 'tr' %}Arayın: <strong>tonbovpn.com</strong>
+          {% else %}搜索访问：<strong>tonbovpn.com</strong>
         {% endcase %}
-      </a>
+      </p>
     </div>
   </aside>
 </div>

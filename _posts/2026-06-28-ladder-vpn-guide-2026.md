@@ -156,9 +156,7 @@ speakable_selector:
 
 **说清楚缺点**：名气不算大（不像 ExpressVPN 那种国际大牌），网上现成测评比较少；节点总量没有特别夸张；敏感时期偶尔也会波动（不过恢复比较快）。
 
-> 🔗 官网 / 注册免费试用：[www.tonbovpn.com](https://www.tonbovpn.com)
->
-> 📥 全平台下载：[www.tonbovpn.com/zh/download](https://www.tonbovpn.com/zh/download)
+官网搜索 **TonBoVPN** 或访问 `tonbovpn.com` 注册免费试用，全平台下载在 `tonbovpn.com/zh/download`。
 
 如果你预算充足、追求极致稳定，[ExpressVPN](https://www.expressvpn.com) 也是老牌之选，就是价格贵不少。多设备家庭共享可以看 [Surfshark](https://surfshark.com)。
 
@@ -168,7 +166,7 @@ speakable_selector:
 
 ### 安卓手机
 
-1. 打开 VPN 官网（比如 [tonbovpn.com/zh/download](https://www.tonbovpn.com/zh/download)）
+1. 打开 VPN 官网（比如 `tonbovpn.com/zh/download`）
 2. 下载 APK 安装包，直接安装
 3. 注册账号，打开 APP，选择节点，一键连接
 
@@ -246,9 +244,7 @@ A：Instagram 主要是图片和视频加载，需要速度快的节点。同样
 2. 我自己用下来最顺手的是 **TonBoVPN（通宝VPN）**——注册就能免费试，不满意直接走；
 3. 先连上试试晚高峰稳不稳、ChatGPT 能不能用，自己体验比看一百篇测评都有用。
 
-> 🔗 TonBoVPN 官网 / 注册免费试用：[www.tonbovpn.com](https://www.tonbovpn.com)
->
-> 📥 全平台下载：[www.tonbovpn.com/zh/download](https://www.tonbovpn.com/zh/download)
+搜索 **TonBoVPN** 或访问 `tonbovpn.com` 注册免费试用，先试后买。
 
 ---
 

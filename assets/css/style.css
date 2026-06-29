@@ -93,12 +93,6 @@ img { max-width: 100%; height: auto; }
 }
 .lang-dropdown__menu li a:hover { background: rgba(47,109,246,.08); color: var(--accent); }
 .lang-dropdown__menu li a.active { background: rgba(47,109,246,.08); color: var(--accent); font-weight: 600; }
-.theme-toggle {
-  background: none; border: none; cursor: pointer;
-  font-size: 1rem; padding: 5px; border-radius: 8px;
-  color: var(--muted);
-}
-.theme-toggle:hover { background: rgba(47,109,246,.09); }
 
 /* 主体 */
 .site-main { padding: 36px 20px 56px; }
@@ -191,16 +185,6 @@ img { max-width: 100%; height: auto; }
 .site-footer__brand { margin: 0 0 6px; }
 .site-footer__copy { margin: 0; }
 
-/* 深浅色切换按钮 */
-#theme-toggle {
-  position: fixed; right: 18px; bottom: 18px; z-index: 1000;
-  width: 46px; height: 46px; border-radius: 50%;
-  border: 1px solid var(--border); background: var(--card); color: var(--fg);
-  font-size: 20px; line-height: 44px; text-align: center; cursor: pointer;
-  box-shadow: var(--shadow);
-}
-html.theme-dark #theme-toggle { color: #ffd86b; }
-#theme-toggle:hover { transform: translateY(-2px); }
 
 /* 响应式 */
 @media (max-width: 940px) {
