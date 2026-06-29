@@ -3,12 +3,7 @@ layout: default
 ---
 
 {% assign lang = page.lang | default: 'zh' %}
-{% if lang == 'en' %}{% assign back_label = '← Back to Home' %}
-{% elsif lang == 'ja' %}{% assign back_label = '← ホームへ' %}
-{% elsif lang == 'ko' %}{% assign back_label = '← 홈으로' %}
-{% elsif lang == 'tr' %}{% assign back_label = '← Ana Sayfa' %}
-{% elsif lang == 'vi' %}{% assign back_label = '← Trang Chủ' %}
-{% else %}{% assign back_label = '← 返回首页' %}{% endif %}
+{% assign lang_posts = site.posts | where: "lang", lang %}
 
 <!-- Breadcrumb JSON-LD -->
 <script type="application/ld+json">
@@ -33,7 +28,7 @@ layout: default
 </script>
 
 {% if page.faq %}
-<!-- FAQPage JSON-LD：AI 问答引擎直接提取 -->
+<!-- FAQPage JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,7 +50,7 @@ layout: default
 {% endif %}
 
 {% if page.howto %}
-<!-- HowTo JSON-LD：步骤化操作指南 -->
+<!-- HowTo JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -76,7 +71,6 @@ layout: default
 {% endif %}
 
 {% if page.speakable_selector %}
-<!-- Speakable schema：声明 AI 应提取摘要的区域 -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -90,22 +84,115 @@ layout: default
 </script>
 {% endif %}
 
-<article class="post" itemscope itemtype="https://schema.org/Article">
-  <header class="post__header">
-    <h1 class="post__title" itemprop="headline">{{ page.title }}</h1>
-    <div class="post__meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: '%Y-%m-%d' }}</time>{% if page.categories.size > 0 %} · {{ page.categories | join: ' / ' }}{% endif %}
-      <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
-        <meta itemprop="name" content="{{ site.author.name }}">
-      </span>
+<div class="post-layout">
+  <article class="post" itemscope itemtype="https://schema.org/Article">
+    {% if page.image %}
+    <div class="post__cover">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" width="1200" height="630" itemprop="image">
     </div>
-  </header>
+    {% endif %}
 
-  <div class="post__content" itemprop="articleBody">
-    {{ content }}
-  </div>
+    <header class="post__header">
+      <h1 class="post__title" itemprop="headline">{{ page.title }}</h1>
+      <div class="post__meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: '%Y-%m-%d' }}</time>{% if page.categories.size > 0 %} · {{ page.categories | join: ' / ' }}{% endif %}
+        <span itemprop="author" itemscope itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content="{{ site.author.name }}">
+        </span>
+      </div>
+    </header>
 
-  <footer class="post__footer">
-    <a class="btn btn--ghost" href="{{ '/' | relative_url }}" rel="author">{{ back_label }}</a>
-  </footer>
-</article>
+    <div class="post__content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    <footer class="post__footer">
+      {% if lang == 'en' %}
+        <a class="btn btn--primary" href="https://www.tonbovpn.com/en/">🎁 200MB Free Daily · Try TonBo VPN</a>
+        <a class="btn btn--ghost" href="{{ '/en/' | relative_url }}">← Back to Home</a>
+      {% elsif lang == 'vi' %}
+        <a class="btn btn--primary" href="https://www.tonbovpn.com/vi/">🎁 200MB miễn phí mỗi ngày · Thử TonBo VPN</a>
+        <a class="btn btn--ghost" href="{{ '/vi/' | relative_url }}">← Trang Chủ</a>
+      {% elsif lang == 'ja' %}
+        <a class="btn btn--primary" href="https://www.tonbovpn.com/ja/">🎁 毎日200MB無料 · TonBo VPNを試す</a>
+        <a class="btn btn--ghost" href="{{ '/ja/' | relative_url }}">← ホームへ</a>
+      {% elsif lang == 'ko' %}
+        <a class="btn btn--primary" href="https://www.tonbovpn.com/ko/">🎁 매일 200MB 무료 · TonBo VPN 체험</a>
+        <a class="btn btn--ghost" href="{{ '/ko/' | relative_url }}">← 홈으로</a>
+      {% elsif lang == 'tr' %}
+        <a class="btn btn--primary" href="https://www.tonbovpn.com/tr/">🎁 Günlük 200MB Ücretsiz · TonBo VPN Dene</a>
+        <a class="btn btn--ghost" href="{{ '/tr/' | relative_url }}">← Ana Sayfa</a>
+      {% else %}
+        <a class="btn btn--primary" href="https://www.tonbovpn.com/zh/">🎁 每日 200M 免费 · 立即试用 TonBoVPN</a>
+        <a class="btn btn--ghost" href="{{ '/' | relative_url }}">← 返回首页</a>
+      {% endif %}
+    </footer>
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar__section">
+      <h3 class="sidebar__title">
+        {% case lang %}
+          {% when 'en' %}Related Articles
+          {% when 'vi' %}Bài Liên Quan
+          {% when 'ja' %}関連記事
+          {% when 'ko' %}관련 포스트
+          {% when 'tr' %}İlgili Yazılar
+          {% else %}推荐阅读
+        {% endcase %}
+      </h3>
+      <ul class="sidebar__list">
+        {% assign count = 0 %}
+        {% for post in lang_posts %}
+          {% if post.url != page.url and count < 5 %}
+            <li class="sidebar__item">
+              <a class="sidebar__link" href="{{ post.url | relative_url }}">
+                {% if post.image %}
+                <img class="sidebar__thumb" src="{{ post.image | relative_url }}" alt="{{ post.title }}" width="400" height="210" loading="lazy">
+                {% endif %}
+                <div class="sidebar__text">
+                  <span class="sidebar__link-title">{{ post.title }}</span>
+                  <time class="sidebar__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+                </div>
+              </a>
+            </li>
+            {% assign count = count | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="sidebar__section sidebar__cta">
+      <h3 class="sidebar__title">
+        {% case lang %}
+          {% when 'en' %}Try TonBo VPN Free
+          {% when 'vi' %}Dùng thử miễn phí
+          {% when 'ja' %}無料で試す
+          {% when 'ko' %}무료 체험하기
+          {% when 'tr' %}Ücretsiz Deneyin
+          {% else %}免费试用 TonBoVPN
+        {% endcase %}
+      </h3>
+      <p class="sidebar__cta-text">
+        {% case lang %}
+          {% when 'en' %}200MB free daily · No credit card needed · Invite friends, both earn $1
+          {% when 'vi' %}200MB miễn phí/ngày · Không cần thẻ · Mời bạn, cả hai nhận $1
+          {% when 'ja' %}毎日200MB無料 · カード不要 · 招待で双方$1
+          {% when 'ko' %}매일 200MB 무료 · 카드 불필요 · 친구 초대 시 양쪽 $1
+          {% when 'tr' %}Günlük 200MB ücretsiz · Kart gerekmez · Arkadaş davet et, ikiniz $1 kazan
+          {% else %}每日 200M 免费 · 无需信用卡 · 邀请好友双方各得 $1
+        {% endcase %}
+      </p>
+      <a class="btn btn--primary sidebar__cta-btn" href="https://www.tonbovpn.com/{% if lang != 'zh' %}{{ lang }}/{% else %}zh/{% endif %}">
+        {% case lang %}
+          {% when 'en' %}Get Started Free →
+          {% when 'vi' %}Dùng thử miễn phí →
+          {% when 'ja' %}無料ではじめる →
+          {% when 'ko' %}무료로 시작하기 →
+          {% when 'tr' %}Ücretsiz Başla →
+          {% else %}免费注册试用 →
+        {% endcase %}
+      </a>
+    </div>
+  </aside>
+</div>
