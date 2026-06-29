@@ -104,22 +104,22 @@
           <div class="lang-dropdown">
             <button class="lang-dropdown__btn" aria-label="Switch language" aria-haspopup="listbox" aria-expanded="false">
               {% case lang %}
-                {% when 'en' %}🌐 EN
-                {% when 'vi' %}🌐 Tiếng Việt
-                {% when 'ja' %}🌐 日本語
-                {% when 'ko' %}🌐 한국어
-                {% when 'tr' %}🌐 Türkçe
-                {% else %}🌐 中文
+                {% when 'en' %}<img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" class="flag-icon"> English
+                {% when 'vi' %}<img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="VN" class="flag-icon"> Tiếng Việt
+                {% when 'ja' %}<img src="https://flagcdn.com/20x15/jp.png" width="20" height="15" alt="JP" class="flag-icon"> 日本語
+                {% when 'ko' %}<img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" class="flag-icon"> 한국어
+                {% when 'tr' %}<img src="https://flagcdn.com/20x15/tr.png" width="20" height="15" alt="TR" class="flag-icon"> Türkçe
+                {% else %}<img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" class="flag-icon"> 中文
               {% endcase %}
               <span class="lang-dropdown__arrow" aria-hidden="true">▾</span>
             </button>
             <ul class="lang-dropdown__menu" role="listbox">
-              <li><a href="/" {% if lang == 'zh' %}class="active" aria-current="true"{% endif %} hreflang="zh-CN">🇨🇳 中文</a></li>
-              <li><a href="/en/" {% if lang == 'en' %}class="active" aria-current="true"{% endif %} hreflang="en">🇺🇸 English</a></li>
-              <li><a href="/ja/" {% if lang == 'ja' %}class="active" aria-current="true"{% endif %} hreflang="ja">🇯🇵 日本語</a></li>
-              <li><a href="/ko/" {% if lang == 'ko' %}class="active" aria-current="true"{% endif %} hreflang="ko">🇰🇷 한국어</a></li>
-              <li><a href="/tr/" {% if lang == 'tr' %}class="active" aria-current="true"{% endif %} hreflang="tr">🇹🇷 Türkçe</a></li>
-              <li><a href="/vi/" {% if lang == 'vi' %}class="active" aria-current="true"{% endif %} hreflang="vi">🇻🇳 Tiếng Việt</a></li>
+              <li><a href="/" {% if lang == 'zh' %}class="active" aria-current="true"{% endif %} hreflang="zh-CN"><img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" class="flag-icon"> 中文</a></li>
+              <li><a href="/en/" {% if lang == 'en' %}class="active" aria-current="true"{% endif %} hreflang="en"><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" class="flag-icon"> English</a></li>
+              <li><a href="/ja/" {% if lang == 'ja' %}class="active" aria-current="true"{% endif %} hreflang="ja"><img src="https://flagcdn.com/20x15/jp.png" width="20" height="15" alt="JP" class="flag-icon"> 日本語</a></li>
+              <li><a href="/ko/" {% if lang == 'ko' %}class="active" aria-current="true"{% endif %} hreflang="ko"><img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" class="flag-icon"> 한국어</a></li>
+              <li><a href="/tr/" {% if lang == 'tr' %}class="active" aria-current="true"{% endif %} hreflang="tr"><img src="https://flagcdn.com/20x15/tr.png" width="20" height="15" alt="TR" class="flag-icon"> Türkçe</a></li>
+              <li><a href="/vi/" {% if lang == 'vi' %}class="active" aria-current="true"{% endif %} hreflang="vi"><img src="https://flagcdn.com/20x15/vn.png" width="20" height="15" alt="VN" class="flag-icon"> Tiếng Việt</a></li>
             </ul>
           </div>
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
