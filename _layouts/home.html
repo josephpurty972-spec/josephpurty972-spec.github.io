@@ -36,6 +36,69 @@ layout: default
     {% assign h_note  = '持续更新 · 多地区实测' %}
 {% endcase %}
 
+{% case lang %}
+  {% when 'en' %}
+    {% assign label_featured = 'Featured' %}
+    {% assign label_min_read = 'min read' %}
+    {% assign label_stats1   = 'Continuously updated' %}
+    {% assign label_stats2   = '6 languages' %}
+    {% assign label_stats3   = 'Independent reviews' %}
+    {% assign cat1 = '🔍 VPN Reviews' %}
+    {% assign cat2 = '🤖 AI Tools' %}
+    {% assign cat3 = '📺 Streaming' %}
+    {% assign cat4 = '🌏 Digital Life' %}
+  {% when 'vi' %}
+    {% assign label_featured = 'Nổi Bật' %}
+    {% assign label_min_read = 'phút đọc' %}
+    {% assign label_stats1   = 'Cập nhật liên tục' %}
+    {% assign label_stats2   = '6 ngôn ngữ' %}
+    {% assign label_stats3   = 'Đánh giá độc lập' %}
+    {% assign cat1 = '🔍 Đánh Giá VPN' %}
+    {% assign cat2 = '🤖 Công Cụ AI' %}
+    {% assign cat3 = '📺 Streaming' %}
+    {% assign cat4 = '🌏 Cuộc Sống Số' %}
+  {% when 'ja' %}
+    {% assign label_featured = '注目記事' %}
+    {% assign label_min_read = '分で読む' %}
+    {% assign label_stats1   = '継続更新' %}
+    {% assign label_stats2   = '6言語対応' %}
+    {% assign label_stats3   = '独立レビュー' %}
+    {% assign cat1 = '🔍 VPNレビュー' %}
+    {% assign cat2 = '🤖 AIツール' %}
+    {% assign cat3 = '📺 ストリーミング' %}
+    {% assign cat4 = '🌏 デジタルライフ' %}
+  {% when 'ko' %}
+    {% assign label_featured = '추천 글' %}
+    {% assign label_min_read = '분 읽기' %}
+    {% assign label_stats1   = '지속 업데이트' %}
+    {% assign label_stats2   = '6개 언어' %}
+    {% assign label_stats3   = '독립 리뷰' %}
+    {% assign cat1 = '🔍 VPN 테스트' %}
+    {% assign cat2 = '🤖 AI 도구' %}
+    {% assign cat3 = '📺 스트리밍' %}
+    {% assign cat4 = '🌏 디지털 라이프' %}
+  {% when 'tr' %}
+    {% assign label_featured = 'Öne Çıkan' %}
+    {% assign label_min_read = 'dk okuma' %}
+    {% assign label_stats1   = 'Sürekli güncelleme' %}
+    {% assign label_stats2   = '6 dil' %}
+    {% assign label_stats3   = 'Bağımsız inceleme' %}
+    {% assign cat1 = '🔍 VPN İncelemesi' %}
+    {% assign cat2 = '🤖 AI Araçları' %}
+    {% assign cat3 = '📺 Yayın' %}
+    {% assign cat4 = '🌏 Dijital Yaşam' %}
+  {% else %}
+    {% assign label_featured = '精选' %}
+    {% assign label_min_read = '分钟' %}
+    {% assign label_stats1   = '持续更新' %}
+    {% assign label_stats2   = '6种语言' %}
+    {% assign label_stats3   = '独立评测' %}
+    {% assign cat1 = '🔍 VPN测评' %}
+    {% assign cat2 = '🤖 AI工具' %}
+    {% assign cat3 = '📺 流媒体' %}
+    {% assign cat4 = '🌏 数字生活' %}
+{% endcase %}
+
 <section class="hero">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" class="hero__img" role="img" aria-label="{{ h_title }}">
     <defs>
@@ -77,6 +140,19 @@ layout: default
 
 <div class="lead">{{ content }}</div>
 
+<div class="stats-bar">
+  <span>✍️ {{ label_stats1 }}</span>
+  <span>🌐 {{ label_stats2 }}</span>
+  <span>🔄 {{ label_stats3 }}</span>
+</div>
+
+<div class="cat-nav">
+  <span class="cat-nav__item">{{ cat1 }}</span>
+  <span class="cat-nav__item">{{ cat2 }}</span>
+  <span class="cat-nav__item">{{ cat3 }}</span>
+  <span class="cat-nav__item">{{ cat4 }}</span>
+</div>
+
 {% case lang %}
   {% when 'en' %}{% assign section_title = 'Latest Articles' %}
   {% when 'ja' %}{% assign section_title = '最新記事' %}
@@ -89,8 +165,31 @@ layout: default
 <h2 class="section-title">{{ section_title }}</h2>
 
 {% assign lang_posts = site.posts | where: "lang", lang %}
+
+{% if lang_posts.size > 0 %}
+{% assign featured_post = lang_posts | first %}
+<article class="post-featured">
+  <a class="post-featured__link" href="{{ featured_post.url | relative_url }}">
+    <div class="post-featured__media">
+      {% if featured_post.image %}<img data-src="{{ featured_post.image | relative_url }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'/%3E" alt="{{ featured_post.title }}" width="1200" height="630">{% endif %}
+    </div>
+    <div class="post-featured__body">
+      <span class="post-featured__badge">{{ label_featured }}</span>
+      <h2 class="post-featured__title">{{ featured_post.title }}</h2>
+      <p class="post-featured__excerpt">{{ featured_post.excerpt | strip_html | strip_newlines | truncate: 140 }}</p>
+      <div class="post-featured__footer">
+        <span class="post-featured__meta">
+          <time datetime="{{ featured_post.date | date_to_xmlschema }}">{{ featured_post.date | date: '%Y-%m-%d' }}</time>{% if featured_post.categories.size > 0 %} · {{ featured_post.categories | first }}{% endif %} · {{ featured_post.content | strip_html | strip_newlines | size | divided_by: 600 | plus: 1 }} {{ label_min_read }}
+        </span>
+        <span class="post-featured__more">{% case lang %}{% when 'en' %}Read more →{% when 'vi' %}Đọc thêm →{% when 'ja' %}続きを読む →{% when 'ko' %}더 읽기 →{% when 'tr' %}Devamını oku →{% else %}阅读全文 →{% endcase %}</span>
+      </div>
+    </div>
+  </a>
+</article>
+{% endif %}
+
 <ul class="post-list">
-  {% for post in lang_posts %}
+  {% for post in lang_posts offset:1 %}
   <li class="post-item">
     <a class="post-item__link" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
       {% if post.image %}
@@ -100,7 +199,7 @@ layout: default
       {% endif %}
       <div class="post-item__body">
         <div class="post-item__meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>{% if post.categories.size > 0 %} · {{ post.categories | join: ' / ' }}{% endif %}
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>{% if post.categories.size > 0 %} · {{ post.categories | join: ' / ' }}{% endif %} · {{ post.content | strip_html | strip_newlines | size | divided_by: 600 | plus: 1 }} {{ label_min_read }}
         </div>
         <h3 class="post-item__title">{{ post.title }}</h3>
         <p class="post-item__excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 80 }}</p>
