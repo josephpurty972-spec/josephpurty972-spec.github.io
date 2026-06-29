@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://josephpurty972-spec.github.io/sitemap.xml

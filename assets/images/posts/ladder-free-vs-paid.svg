@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a3c"/>
+      <stop offset="100%" style="stop-color:#1a2d52"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="12" fill="url(#bg2)"/>
+  <text x="400" y="45" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="18" font-weight="bold">免费梯子 vs 付费梯子：到底该怎么选</text>
+
+  <!-- Free column -->
+  <rect x="40" y="70" width="340" height="310" rx="10" fill="rgba(255,71,87,0.08)" stroke="rgba(255,71,87,0.3)" stroke-width="1.5"/>
+  <text x="210" y="100" text-anchor="middle" fill="#ff6b81" font-family="sans-serif" font-size="16" font-weight="bold">免费梯子</text>
+  <g fill="rgba(255,255,255,0.7)" font-family="sans-serif" font-size="13">
+    <text x="70" y="135">⚠️ 速度慢，晚高峰基本不能用</text>
+    <text x="70" y="165">⚠️ 随时跑路，数据去向不明</text>
+    <text x="70" y="195">⚠️ 可能记录你的浏览数据</text>
+    <text x="70" y="225">⚠️ 节点少，常被封</text>
+    <text x="70" y="255">⚠️ 无客服，出问题自己扛</text>
+    <text x="70" y="285">⚠️ 插广告、捆绑软件</text>
+  </g>
+  <rect x="70" y="310" width="280" height="50" rx="8" fill="rgba(255,71,87,0.1)"/>
+  <text x="210" y="340" text-anchor="middle" fill="#ff6b81" font-family="sans-serif" font-size="12" font-weight="bold">结论：临时应急可以试，长期用风险大</text>
+
+  <!-- Paid column -->
+  <rect x="420" y="70" width="340" height="310" rx="10" fill="rgba(146,254,157,0.06)" stroke="rgba(146,254,157,0.3)" stroke-width="1.5"/>
+  <text x="590" y="100" text-anchor="middle" fill="#92fe9d" font-family="sans-serif" font-size="16" font-weight="bold">付费梯子 / VPN</text>
+  <g fill="rgba(255,255,255,0.7)" font-family="sans-serif" font-size="13">
+    <text x="450" y="135">✅ 速度快，晚高峰也能用</text>
+    <text x="450" y="165">✅ 正规运营，不会突然跑路</text>
+    <text x="450" y="195">✅ 严格无日志政策</text>
+    <text x="450" y="225">✅ 全球节点多，抗封锁强</text>
+    <text x="450" y="255">✅ 专业客服，随时解决问题</text>
+    <text x="450" y="285">✅ 支持免费试用，不满意可退</text>
+  </g>
+  <rect x="450" y="310" width="280" height="50" rx="8" fill="rgba(146,254,157,0.08)"/>
+  <text x="590" y="340" text-anchor="middle" fill="#92fe9d" font-family="sans-serif" font-size="12" font-weight="bold">结论：选带免费试用的，零成本验证再付费</text>
+
+  <text x="400" y="405" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="12">建议：先用付费VPN的免费试用功能体验，比纯免费梯子更安全更稳定</text>
+</svg>

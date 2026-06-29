@@ -1,0 +1,37 @@
+title: "全球数字生活指南"
+description: >-
+  全球数字生活指南：持续更新的网络加速工具实测、AI平台访问教程、
+  流媒体解锁攻略，多地区多线路晚高峰稳定性评测。
+url: "https://josephpurty972-spec.github.io"
+baseurl: ""
+lang: zh-CN
+
+author:
+  name: "全球数字生活指南"
+
+timezone: Asia/Shanghai
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      lang: zh
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page

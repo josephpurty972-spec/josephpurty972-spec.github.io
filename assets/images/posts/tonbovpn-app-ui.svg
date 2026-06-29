@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="appBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b1829"/><stop offset="100%" style="stop-color:#132744"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb"/><stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="connGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e"/><stop offset="100%" style="stop-color:#16a34a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Phone frame -->
+  <rect x="220" y="20" width="360" height="480" rx="32" fill="#0f1d32" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <rect x="340" y="32" width="120" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+  <!-- Status bar -->
+  <text x="248" y="58" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="11">9:41</text>
+  <text x="548" y="58" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="11">100%</text>
+  <!-- App content area -->
+  <rect x="236" y="70" width="328" height="418" rx="0" fill="url(#appBg)"/>
+  <!-- Logo + brand -->
+  <text x="400" y="110" text-anchor="middle" fill="#3b82f6" font-family="sans-serif" font-size="13" font-weight="700" letter-spacing="2">TonBoVPN</text>
+  <text x="400" y="128" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">通博VPN</text>
+  <!-- Connection circle -->
+  <circle cx="400" cy="220" r="70" fill="none" stroke="rgba(34,197,94,0.15)" stroke-width="16"/>
+  <circle cx="400" cy="220" r="70" fill="none" stroke="#22c55e" stroke-width="3" filter="url(#glow)"/>
+  <circle cx="400" cy="220" r="50" fill="rgba(34,197,94,0.08)"/>
+  <!-- Power icon -->
+  <line x1="400" y1="192" x2="400" y2="208" stroke="#22c55e" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 384 204 A 20 20 0 1 0 416 204" fill="none" stroke="#22c55e" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Connected text -->
+  <text x="400" y="260" text-anchor="middle" fill="#22c55e" font-family="sans-serif" font-size="11" font-weight="600">已连接</text>
+  <!-- Connection info card -->
+  <rect x="260" y="300" width="280" height="80" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="280" y="325" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="11">当前节点</text>
+  <text x="520" y="325" text-anchor="end" fill="rgba(255,255,255,0.9)" font-family="sans-serif" font-size="12" font-weight="600">🇯🇵 日本 - 东京 01</text>
+  <line x1="280" y1="340" x2="520" y2="340" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="280" y="360" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="11">协议</text>
+  <text x="520" y="360" text-anchor="end" fill="rgba(255,255,255,0.9)" font-family="sans-serif" font-size="12" font-weight="600">VLESS + Reality</text>
+  <line x1="280" y1="372" x2="520" y2="372" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <!-- Speed stats -->
+  <g transform="translate(280, 395)">
+    <text fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">↓ 下载</text>
+    <text y="18" fill="#4facfe" font-family="sans-serif" font-size="16" font-weight="700">86.4</text>
+    <text x="48" y="18" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">Mbps</text>
+  </g>
+  <g transform="translate(410, 395)">
+    <text fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">↑ 上传</text>
+    <text y="18" fill="#4facfe" font-family="sans-serif" font-size="16" font-weight="700">42.1</text>
+    <text x="48" y="18" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">Mbps</text>
+  </g>
+  <!-- Bottom nav -->
+  <rect x="236" y="448" width="328" height="40" fill="rgba(0,0,0,0.3)"/>
+  <text x="300" y="474" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="10">首页</text>
+  <text x="400" y="474" text-anchor="middle" fill="#3b82f6" font-family="sans-serif" font-size="10" font-weight="600">连接</text>
+  <text x="500" y="474" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="10">节点</text>
+  <!-- Side labels -->
+  <g transform="translate(30, 160)">
+    <rect width="160" height="44" rx="8" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.2)" stroke-width="1"/>
+    <text x="15" y="18" fill="#22c55e" font-family="sans-serif" font-size="11" font-weight="600">✓ 一键连接</text>
+    <text x="15" y="34" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">新手零配置上手</text>
+  </g>
+  <g transform="translate(30, 220)">
+    <rect width="160" height="44" rx="8" fill="rgba(79,172,254,0.08)" stroke="rgba(79,172,254,0.2)" stroke-width="1"/>
+    <text x="15" y="18" fill="#4facfe" font-family="sans-serif" font-size="11" font-weight="600">✓ VLESS+Reality</text>
+    <text x="15" y="34" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">2026 最强抗封协议</text>
+  </g>
+  <g transform="translate(610, 160)">
+    <rect width="160" height="44" rx="8" fill="rgba(251,191,36,0.08)" stroke="rgba(251,191,36,0.2)" stroke-width="1"/>
+    <text x="15" y="18" fill="#fbbf24" font-family="sans-serif" font-size="11" font-weight="600">✓ 免费试用</text>
+    <text x="15" y="34" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">注册即可体验</text>
+  </g>
+  <g transform="translate(610, 220)">
+    <rect width="160" height="44" rx="8" fill="rgba(168,85,247,0.08)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+    <text x="15" y="18" fill="#a855f7" font-family="sans-serif" font-size="11" font-weight="600">✓ 全平台客户端</text>
+    <text x="15" y="34" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="10">Win / Mac / iOS / 安卓</text>
+  </g>
+</svg>

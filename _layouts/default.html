@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+{% assign lang = page.lang | default: 'zh' %}
+{% if lang == 'ja' %}{% assign html_lang = 'ja' %}
+{% elsif lang == 'ko' %}{% assign html_lang = 'ko' %}
+{% elsif lang == 'vi' %}{% assign html_lang = 'vi' %}
+{% elsif lang == 'tr' %}{% assign html_lang = 'tr' %}
+{% elsif lang == 'en' %}{% assign html_lang = 'en' %}
+{% else %}{% assign html_lang = 'zh-CN' %}{% endif %}
+<html lang="{{ html_lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+  {% seo %}
+
+  <!-- hreflang: 多语言版本互相声明，消除重复收录 -->
+  {% if page.layout == 'home' or page.url == '/' or page.url == '/en/' or page.url == '/ja/' or page.url == '/ko/' or page.url == '/tr/' or page.url == '/vi/' %}
+  <link rel="alternate" hreflang="zh-CN" href="{{ site.url }}/" />
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/en/" />
+  <link rel="alternate" hreflang="ja" href="{{ site.url }}/ja/" />
+  <link rel="alternate" hreflang="ko" href="{{ site.url }}/ko/" />
+  <link rel="alternate" hreflang="tr" href="{{ site.url }}/tr/" />
+  <link rel="alternate" hreflang="vi" href="{{ site.url }}/vi/" />
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/" />
+  {% endif %}
+
+  <!-- OG image 尺寸声明（社交分享优化） -->
+  {% if page.image %}
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  {% endif %}
+
+  <!-- JSON-LD 结构化数据 -->
+  {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page.description | default: page.excerpt | strip_html | strip_newlines | truncate: 160 | jsonify }},
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+    "author": {
+      "@type": "Organization",
+      "name": "{{ site.author.name }}",
+      "url": "{{ site.url }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "url": "{{ site.url }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/assets/images/logo.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}"
+    }{% if page.image %},
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}{{ page.image }}",
+      "width": 1200,
+      "height": 630
+    }{% endif %}
+  }
+  </script>
+  {% else %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "description": {{ site.description | jsonify }},
+    "url": "{{ site.url }}",
+    "inLanguage": "{{ html_lang }}"
+  }
+  </script>
+  {% endif %}
+
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/lazy-load.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      {% if lang == 'zh' or lang == nil %}{% assign brand_home = '/' %}
+      {% else %}{% assign brand_home = lang | prepend: '/' | append: '/' %}{% endif %}
+      <a class="brand" href="{{ brand_home | relative_url }}">
+        <img class="brand__logo" src="{{ '/assets/images/logo.svg' | relative_url }}" alt="{{ site.title }} Logo" width="32" height="32">
+        <span class="brand__name">全球数字生活指南</span>
+      </a>
+      <div class="site-nav-wrap">
+        <nav class="site-nav" aria-label="主导航">
+          {% assign nav_items = site.data.navigation[lang] | default: site.data.navigation.zh %}
+          {% for item in nav_items %}
+            <a href="{{ item.url }}"{% if item.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ item.title }}</a>
+          {% endfor %}
+        </nav>
+        <div class="lang-switch">
+          <div class="lang-dropdown">
+            <button class="lang-dropdown__btn" aria-label="Switch language" aria-haspopup="listbox" aria-expanded="false">
+              {% case lang %}
+                {% when 'en' %}🌐 EN
+                {% when 'vi' %}🌐 Tiếng Việt
+                {% when 'ja' %}🌐 日本語
+                {% when 'ko' %}🌐 한국어
+                {% when 'tr' %}🌐 Türkçe
+                {% else %}🌐 中文
+              {% endcase %}
+              <span class="lang-dropdown__arrow" aria-hidden="true">▾</span>
+            </button>
+            <ul class="lang-dropdown__menu" role="listbox">
+              <li><a href="/" {% if lang == 'zh' %}class="active" aria-current="true"{% endif %} hreflang="zh-CN">🇨🇳 中文</a></li>
+              <li><a href="/en/" {% if lang == 'en' %}class="active" aria-current="true"{% endif %} hreflang="en">🇺🇸 English</a></li>
+              <li><a href="/ja/" {% if lang == 'ja' %}class="active" aria-current="true"{% endif %} hreflang="ja">🇯🇵 日本語</a></li>
+              <li><a href="/ko/" {% if lang == 'ko' %}class="active" aria-current="true"{% endif %} hreflang="ko">🇰🇷 한국어</a></li>
+              <li><a href="/tr/" {% if lang == 'tr' %}class="active" aria-current="true"{% endif %} hreflang="tr">🇹🇷 Türkçe</a></li>
+              <li><a href="/vi/" {% if lang == 'vi' %}class="active" aria-current="true"{% endif %} hreflang="vi">🇻🇳 Tiếng Việt</a></li>
+            </ul>
+          </div>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container site-main" id="main-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      {% if lang == 'en' %}
+        <p class="site-footer__brand">Independent VPN reviews & guides for users in China · Updated 2026</p>
+      {% elsif lang == 'ja' %}
+        <p class="site-footer__brand">中国からのVPN実測レビュー · 2026年最新</p>
+      {% elsif lang == 'ko' %}
+        <p class="site-footer__brand">중국 VPN 실측 리뷰 · 2026년 업데이트</p>
+      {% elsif lang == 'tr' %}
+        <p class="site-footer__brand">Çin'den VPN incelemeleri · 2026 güncel</p>
+      {% elsif lang == 'vi' %}
+        <p class="site-footer__brand">Đánh giá VPN từ Trung Quốc · Cập nhật 2026</p>
+      {% else %}
+        <p class="site-footer__brand">独立第三方数字生活工具实测 · 持续更新中</p>
+      {% endif %}
+      <p class="site-footer__copy">© {{ site.time | date: '%Y' }} 全球数字生活指南</p>
+    </div>
+  </footer>
+</body>
+</html>

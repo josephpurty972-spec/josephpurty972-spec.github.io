@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a3c"/>
+      <stop offset="100%" style="stop-color:#1a2d52"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" rx="12" fill="url(#bg1)"/>
+  <!-- User -->
+  <g transform="translate(100,200)">
+    <circle r="30" fill="rgba(79,172,254,0.15)" stroke="#4facfe" stroke-width="2"/>
+    <text y="5" text-anchor="middle" fill="#4facfe" font-family="sans-serif" font-size="24">👤</text>
+    <text y="55" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="sans-serif" font-size="13">你的设备</text>
+  </g>
+  <!-- Encrypted tunnel -->
+  <line x1="145" y1="200" x2="295" y2="200" stroke="#ffd200" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="220" y="185" text-anchor="middle" fill="#ffd200" font-family="sans-serif" font-size="11">加密隧道</text>
+  <!-- Wall -->
+  <rect x="300" y="100" width="60" height="200" rx="6" fill="rgba(255,71,87,0.2)" stroke="#ff4757" stroke-width="2"/>
+  <text x="330" y="205" text-anchor="middle" fill="#ff4757" font-family="sans-serif" font-size="11" font-weight="bold">防火墙</text>
+  <text x="330" y="220" text-anchor="middle" fill="#ff4757" font-family="sans-serif" font-size="10">GFW</text>
+  <!-- Arrow through wall -->
+  <line x1="365" y1="200" x2="475" y2="200" stroke="#00f2fe" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="420" y="185" text-anchor="middle" fill="#00f2fe" font-family="sans-serif" font-size="11">伪装流量</text>
+  <!-- VPN Server -->
+  <g transform="translate(520,200)">
+    <rect x="-40" y="-35" width="80" height="70" rx="8" fill="rgba(146,254,157,0.1)" stroke="#92fe9d" stroke-width="2"/>
+    <text y="0" text-anchor="middle" fill="#92fe9d" font-family="sans-serif" font-size="20">🛡️</text>
+    <text y="20" text-anchor="middle" fill="#92fe9d" font-family="sans-serif" font-size="10">梯子/VPN</text>
+    <text y="55" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="sans-serif" font-size="13">海外服务器</text>
+  </g>
+  <!-- Arrow to internet -->
+  <line x1="575" y1="200" x2="640" y2="200" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  <polygon points="640,195 650,200 640,205" fill="rgba(255,255,255,0.3)"/>
+  <!-- Internet -->
+  <g transform="translate(700,200)">
+    <circle r="35" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+    <text y="-5" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="22">🌐</text>
+    <text y="15" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="10">自由互联网</text>
+    <text y="55" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="11">Google YouTube</text>
+    <text y="70" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="11">ChatGPT etc.</text>
+  </g>
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="18" font-weight="bold">梯子 / VPN 科学上网原理示意</text>
+  <!-- Note -->
+  <text x="400" y="370" text-anchor="middle" fill="rgba(255,255,255,0.4)" font-family="sans-serif" font-size="12">核心：加密你的流量 → 伪装成正常 HTTPS → 穿越防火墙 → 连接自由互联网</text>
+</svg>

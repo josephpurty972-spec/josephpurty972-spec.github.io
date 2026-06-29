@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2a"/>
+      <stop offset="100%" style="stop-color:#1b2d4f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f7971e"/>
+      <stop offset="100%" style="stop-color:#ffd200"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00c9ff"/>
+      <stop offset="100%" style="stop-color:#92fe9d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid dots -->
+  <g fill="rgba(255,255,255,0.05)">
+    <circle cx="100" cy="100" r="2"/><circle cx="200" cy="100" r="2"/><circle cx="300" cy="100" r="2"/><circle cx="400" cy="100" r="2"/><circle cx="500" cy="100" r="2"/><circle cx="600" cy="100" r="2"/><circle cx="700" cy="100" r="2"/><circle cx="800" cy="100" r="2"/><circle cx="900" cy="100" r="2"/><circle cx="1000" cy="100" r="2"/><circle cx="1100" cy="100" r="2"/>
+    <circle cx="100" cy="200" r="2"/><circle cx="200" cy="200" r="2"/><circle cx="300" cy="200" r="2"/><circle cx="400" cy="200" r="2"/><circle cx="500" cy="200" r="2"/><circle cx="600" cy="200" r="2"/><circle cx="700" cy="200" r="2"/><circle cx="800" cy="200" r="2"/><circle cx="900" cy="200" r="2"/><circle cx="1000" cy="200" r="2"/><circle cx="1100" cy="200" r="2"/>
+    <circle cx="100" cy="300" r="2"/><circle cx="200" cy="300" r="2"/><circle cx="300" cy="300" r="2"/><circle cx="400" cy="300" r="2"/><circle cx="500" cy="300" r="2"/><circle cx="600" cy="300" r="2"/><circle cx="700" cy="300" r="2"/><circle cx="800" cy="300" r="2"/><circle cx="900" cy="300" r="2"/><circle cx="1000" cy="300" r="2"/><circle cx="1100" cy="300" r="2"/>
+    <circle cx="100" cy="400" r="2"/><circle cx="200" cy="400" r="2"/><circle cx="300" cy="400" r="2"/><circle cx="400" cy="400" r="2"/><circle cx="500" cy="400" r="2"/><circle cx="600" cy="400" r="2"/><circle cx="700" cy="400" r="2"/><circle cx="800" cy="400" r="2"/><circle cx="900" cy="400" r="2"/><circle cx="1000" cy="400" r="2"/><circle cx="1100" cy="400" r="2"/>
+    <circle cx="100" cy="500" r="2"/><circle cx="200" cy="500" r="2"/><circle cx="300" cy="500" r="2"/><circle cx="400" cy="500" r="2"/><circle cx="500" cy="500" r="2"/><circle cx="600" cy="500" r="2"/><circle cx="700" cy="500" r="2"/><circle cx="800" cy="500" r="2"/><circle cx="900" cy="500" r="2"/><circle cx="1000" cy="500" r="2"/><circle cx="1100" cy="500" r="2"/>
+  </g>
+  <!-- Ladder icon -->
+  <g transform="translate(600,220)" stroke="url(#accent)" fill="none" stroke-width="3.5" stroke-linecap="round">
+    <line x1="-40" y1="-100" x2="-40" y2="100"/>
+    <line x1="40" y1="-100" x2="40" y2="100"/>
+    <line x1="-40" y1="-70" x2="40" y2="-70"/>
+    <line x1="-40" y1="-30" x2="40" y2="-30"/>
+    <line x1="-40" y1="10" x2="40" y2="10"/>
+    <line x1="-40" y1="50" x2="40" y2="50"/>
+    <line x1="-40" y1="90" x2="40" y2="90"/>
+    <!-- Arrow up -->
+    <path d="M0-120 L-15-95 M0-120 L15-95" stroke="url(#green)" stroke-width="3"/>
+    <line x1="0" y1="-120" x2="0" y2="-60" stroke="url(#green)" stroke-width="2" stroke-dasharray="6,4"/>
+  </g>
+  <!-- Wall -->
+  <g transform="translate(600,220)" opacity="0.25">
+    <rect x="-130" y="-100" width="20" height="200" rx="3" fill="#ff4757"/>
+    <rect x="110" y="-100" width="20" height="200" rx="3" fill="#ff4757"/>
+    <text x="0" y="130" text-anchor="middle" fill="#ff4757" font-family="sans-serif" font-size="13">FIREWALL</text>
+  </g>
+  <!-- Title -->
+  <text x="600" y="420" text-anchor="middle" fill="#ffffff" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="40" font-weight="700">2026 梯子VPN科学上网完全指南</text>
+  <text x="600" y="470" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="21">梯子是什么 · 怎么选 · 免费vs付费 · 安全避坑</text>
+  <!-- Tag -->
+  <rect x="490" y="500" width="220" height="36" rx="18" fill="url(#accent)" opacity="0.9"/>
+  <text x="600" y="524" text-anchor="middle" fill="#0d1b2a" font-family="sans-serif" font-size="16" font-weight="600">全球数字生活指南</text>
+</svg>

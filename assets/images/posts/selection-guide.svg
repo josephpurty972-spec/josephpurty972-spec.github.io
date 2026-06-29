@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#141e30"/><stop offset="100%" style="stop-color:#243b55"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg4)" rx="16"/>
+  <text x="400" y="50" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="sans-serif" font-size="20" font-weight="700">选择 VPN 的 6 条硬指标</text>
+  <!-- 6 items in 2 columns -->
+  <g transform="translate(60,80)">
+    <!-- Col 1 -->
+    <g transform="translate(0,20)">
+      <circle cx="20" cy="12" r="18" fill="rgba(79,172,254,0.15)" stroke="#4facfe" stroke-width="1.5"/>
+      <text x="20" y="17" text-anchor="middle" fill="#4facfe" font-size="14" font-weight="700">1</text>
+      <text x="50" y="18" fill="#fff" font-size="15" font-weight="600">协议抗封锁能力</text>
+      <text x="50" y="38" fill="rgba(255,255,255,0.5)" font-size="12">VLESS+Reality > WireGuard > SS/V2Ray</text>
+    </g>
+    <g transform="translate(0,90)">
+      <circle cx="20" cy="12" r="18" fill="rgba(79,172,254,0.15)" stroke="#4facfe" stroke-width="1.5"/>
+      <text x="20" y="17" text-anchor="middle" fill="#4facfe" font-size="14" font-weight="700">2</text>
+      <text x="50" y="18" fill="#fff" font-size="15" font-weight="600">晚高峰稳定性</text>
+      <text x="50" y="38" fill="rgba(255,255,255,0.5)" font-size="12">20:00 之后还能用才算数</text>
+    </g>
+    <g transform="translate(0,160)">
+      <circle cx="20" cy="12" r="18" fill="rgba(79,172,254,0.15)" stroke="#4facfe" stroke-width="1.5"/>
+      <text x="20" y="17" text-anchor="middle" fill="#4facfe" font-size="14" font-weight="700">3</text>
+      <text x="50" y="18" fill="#fff" font-size="15" font-weight="600">AI 平台可用性</text>
+      <text x="50" y="38" fill="rgba(255,255,255,0.5)" font-size="12">ChatGPT/Claude 对 IP 质量要求高</text>
+    </g>
+    <!-- Col 2 -->
+    <g transform="translate(380,20)">
+      <circle cx="20" cy="12" r="18" fill="rgba(79,212,172,0.15)" stroke="#4fd6ac" stroke-width="1.5"/>
+      <text x="20" y="17" text-anchor="middle" fill="#4fd6ac" font-size="14" font-weight="700">4</text>
+      <text x="50" y="18" fill="#fff" font-size="15" font-weight="600">免费试用 / 退款</text>
+      <text x="50" y="38" fill="rgba(255,255,255,0.5)" font-size="12">零成本先试再决定</text>
+    </g>
+    <g transform="translate(380,90)">
+      <circle cx="20" cy="12" r="18" fill="rgba(79,212,172,0.15)" stroke="#4fd6ac" stroke-width="1.5"/>
+      <text x="20" y="17" text-anchor="middle" fill="#4fd6ac" font-size="14" font-weight="700">5</text>
+      <text x="50" y="18" fill="#fff" font-size="15" font-weight="600">团队背景透明</text>
+      <text x="50" y="38" fill="rgba(255,255,255,0.5)" font-size="12">避免背景不明、随时跑路</text>
+    </g>
+    <g transform="translate(380,160)">
+      <circle cx="20" cy="12" r="18" fill="rgba(79,212,172,0.15)" stroke="#4fd6ac" stroke-width="1.5"/>
+      <text x="20" y="17" text-anchor="middle" fill="#4fd6ac" font-size="14" font-weight="700">6</text>
+      <text x="50" y="18" fill="#fff" font-size="15" font-weight="600">全平台支持</text>
+      <text x="50" y="38" fill="rgba(255,255,255,0.5)" font-size="12">Windows / Mac / iOS / Android</text>
+    </g>
+  </g>
+</svg>

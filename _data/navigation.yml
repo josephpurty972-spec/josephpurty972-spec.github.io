@@ -1,0 +1,27 @@
+zh:
+  - title: 首页
+    url: /
+  - title: 关于
+    url: /about/
+
+en:
+  - title: Home
+    url: /en/
+  - title: About
+    url: /about/
+
+ja:
+  - title: ホーム
+    url: /ja/
+
+ko:
+  - title: 홈
+    url: /ko/
+
+tr:
+  - title: Ana Sayfa
+    url: /tr/
+
+vi:
+  - title: Trang chủ
+    url: /vi/

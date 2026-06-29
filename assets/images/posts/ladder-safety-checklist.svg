@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1a3c"/>
+      <stop offset="100%" style="stop-color:#1a2d52"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="380" rx="12" fill="url(#bg3)"/>
+  <text x="400" y="42" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="18" font-weight="bold">梯子安全使用 Checklist</text>
+
+  <g font-family="sans-serif" font-size="14">
+    <!-- Item 1 -->
+    <rect x="50" y="65" width="320" height="60" rx="8" fill="rgba(79,172,254,0.08)" stroke="rgba(79,172,254,0.2)" stroke-width="1"/>
+    <text x="80" y="92" fill="#4facfe" font-size="18">1</text>
+    <text x="105" y="88" fill="#fff" font-weight="bold">选正规VPN</text>
+    <text x="105" y="110" fill="rgba(255,255,255,0.6)" font-size="12">海外团队运营，有明确隐私政策</text>
+
+    <!-- Item 2 -->
+    <rect x="50" y="140" width="320" height="60" rx="8" fill="rgba(79,172,254,0.08)" stroke="rgba(79,172,254,0.2)" stroke-width="1"/>
+    <text x="80" y="167" fill="#4facfe" font-size="18">2</text>
+    <text x="105" y="163" fill="#fff" font-weight="bold">不要用来干违法的事</text>
+    <text x="105" y="185" fill="rgba(255,255,255,0.6)" font-size="12">仅用于学习、工作、正常上网</text>
+
+    <!-- Item 3 -->
+    <rect x="50" y="215" width="320" height="60" rx="8" fill="rgba(79,172,254,0.08)" stroke="rgba(79,172,254,0.2)" stroke-width="1"/>
+    <text x="80" y="242" fill="#4facfe" font-size="18">3</text>
+    <text x="105" y="238" fill="#fff" font-weight="bold">不在公开场合传播</text>
+    <text x="105" y="260" fill="rgba(255,255,255,0.6)" font-size="12">低调使用，不分享到社交媒体</text>
+
+    <!-- Item 4 -->
+    <rect x="430" y="65" width="320" height="60" rx="8" fill="rgba(255,210,0,0.08)" stroke="rgba(255,210,0,0.2)" stroke-width="1"/>
+    <text x="460" y="92" fill="#ffd200" font-size="18">4</text>
+    <text x="485" y="88" fill="#fff" font-weight="bold">远离免费来路不明的梯子</text>
+    <text x="485" y="110" fill="rgba(255,255,255,0.6)" font-size="12">可能窃取密码、记录浏览记录</text>
+
+    <!-- Item 5 -->
+    <rect x="430" y="140" width="320" height="60" rx="8" fill="rgba(255,210,0,0.08)" stroke="rgba(255,210,0,0.2)" stroke-width="1"/>
+    <text x="460" y="167" fill="#ffd200" font-size="18">5</text>
+    <text x="485" y="163" fill="#fff" font-weight="bold">开全局模式要小心</text>
+    <text x="485" y="185" fill="rgba(255,255,255,0.6)" font-size="12">银行/支付类APP建议关掉VPN</text>
+
+    <!-- Item 6 -->
+    <rect x="430" y="215" width="320" height="60" rx="8" fill="rgba(255,210,0,0.08)" stroke="rgba(255,210,0,0.2)" stroke-width="1"/>
+    <text x="460" y="242" fill="#ffd200" font-size="18">6</text>
+    <text x="485" y="238" fill="#fff" font-weight="bold">定期更新客户端</text>
+    <text x="485" y="260" fill="rgba(255,255,255,0.6)" font-size="12">新版修复封锁 + 安全漏洞</text>
+  </g>
+
+  <text x="400" y="320" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="sans-serif" font-size="13">记住：工具本身是中性的，关键是你怎么用</text>
+  <text x="400" y="360" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="sans-serif" font-size="11">遵守当地法律法规，仅用于合法的学习、工作和跨境业务</text>
+</svg>
