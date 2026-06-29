@@ -85,7 +85,7 @@ layout: default
 {% endif %}
 
 <div class="post-layout">
-  <article class="post" itemscope itemtype="https://schema.org/Article">
+  <article class="post post--full" itemscope itemtype="https://schema.org/Article">
     {% if page.image %}
     <div class="post__cover">
       <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" width="1200" height="630" itemprop="image">
@@ -123,70 +123,4 @@ layout: default
     </footer>
   </article>
 
-  <aside class="sidebar">
-    <div class="sidebar__section">
-      <h3 class="sidebar__title">
-        {% case lang %}
-          {% when 'en' %}Related Articles
-          {% when 'vi' %}Bài Liên Quan
-          {% when 'ja' %}関連記事
-          {% when 'ko' %}관련 포스트
-          {% when 'tr' %}İlgili Yazılar
-          {% else %}推荐阅读
-        {% endcase %}
-      </h3>
-      <ul class="sidebar__list">
-        {% assign count = 0 %}
-        {% for post in lang_posts %}
-          {% if post.url != page.url and count < 5 %}
-            <li class="sidebar__item">
-              <a class="sidebar__link" href="{{ post.url | relative_url }}">
-                {% if post.image %}
-                <img class="sidebar__thumb" src="{{ post.image | relative_url }}" alt="{{ post.title }}" width="400" height="210" loading="lazy">
-                {% endif %}
-                <div class="sidebar__text">
-                  <span class="sidebar__link-title">{{ post.title }}</span>
-                  <time class="sidebar__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y-%m-%d' }}</time>
-                </div>
-              </a>
-            </li>
-            {% assign count = count | plus: 1 %}
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-
-    <div class="sidebar__section sidebar__cta">
-      <h3 class="sidebar__title">
-        {% case lang %}
-          {% when 'en' %}TonBo VPN
-          {% when 'vi' %}TonBo VPN
-          {% when 'ja' %}TonBo VPN
-          {% when 'ko' %}TonBo VPN
-          {% when 'tr' %}TonBo VPN
-          {% else %}TonBoVPN 推荐
-        {% endcase %}
-      </h3>
-      <p class="sidebar__cta-text">
-        {% case lang %}
-          {% when 'en' %}VLESS + Reality protocol · 200MB free daily · No credit card needed
-          {% when 'vi' %}Giao thức VLESS + Reality · 200MB miễn phí/ngày · Không cần thẻ
-          {% when 'ja' %}VLESS + Reality プロトコル · 毎日200MB無料 · カード不要
-          {% when 'ko' %}VLESS + Reality 프로토콜 · 매일 200MB 무료 · 카드 불필요
-          {% when 'tr' %}VLESS + Reality protokolü · Günlük 200MB ücretsiz · Kart gerekmez
-          {% else %}VLESS + Reality 协议 · 每日 200M 免费 · 无需信用卡
-        {% endcase %}
-      </p>
-      <p class="sidebar__cta-text" style="word-break:break-all;">
-        {% case lang %}
-          {% when 'en' %}Search: <strong>tonbovpn.com</strong>
-          {% when 'vi' %}Tìm kiếm: <strong>tonbovpn.com</strong>
-          {% when 'ja' %}検索: <strong>tonbovpn.com</strong>
-          {% when 'ko' %}검색: <strong>tonbovpn.com</strong>
-          {% when 'tr' %}Arayın: <strong>tonbovpn.com</strong>
-          {% else %}搜索访问：<strong>tonbovpn.com</strong>
-        {% endcase %}
-      </p>
-    </div>
-  </aside>
 </div>
