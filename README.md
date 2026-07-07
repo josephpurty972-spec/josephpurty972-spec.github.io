@@ -10,6 +10,13 @@
 
 ---
 
+## 🔗 相关专题（持续更新中）
+
+- [VLESS+Reality / WireGuard混淆 / 传统协议：2026年三类翻墙协议实测横评](https://josephpurty972-spec.github.io/2026/07/07/vpn-protocol-comparison-2026/) —— 不比品牌比协议，多运营商晚高峰实测数据全公开
+- [2026 梯子VPN科学上网完全指南](https://josephpurty972-spec.github.io/2026/06/28/ladder-vpn-guide-2026/) —— 梯子是什么、怎么选、免费还是付费
+
+---
+
 ## 📌 TL;DR（最快结论）
 
 | 排名 | VPN | 协议 / 抗封锁 | 中国稳定性 | 试用 | 直达 |
