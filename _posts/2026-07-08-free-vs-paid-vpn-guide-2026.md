@@ -6,7 +6,7 @@ categories: [科学上网]
 tags: [免费VPN, 付费VPN, 省钱攻略, 科学上网, VPN测评]
 excerpt: "免费VPN真的更省钱吗？把时间成本、风险成本都算进去，实测下来结论可能和你想的不一样。"
 description: "2026年免费VPN与付费VPN成本对比：连接成功率、时间成本、隐私风险、长期真实花费实测数据，附预算有限时的选择建议。"
-image: /assets/images/covers/dedicated-ip.svg
+image: /assets/images/covers/free-vs-paid-vpn-guide-2026.webp
 faq:
   - q: "长期用免费VPN真的比付费划算吗？"
     a: "算上折腾节点的时间成本和隐私风险，长期看并不划算。付费VPN年付均摊到每天成本很低，而且免费试用期本身就是零成本的。"

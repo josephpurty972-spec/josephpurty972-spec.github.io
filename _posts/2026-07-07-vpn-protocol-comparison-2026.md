@@ -6,7 +6,7 @@ categories: [科学上网]
 tags: [VLESS Reality, WireGuard混淆, 协议对比, VPN测评, 科学上网]
 excerpt: "别只看品牌榜单——2026年真正决定还能不能连的是协议。三类协议、8组城市运营商实测数据全公开。"
 description: "2026年VLESS+Reality、WireGuard混淆、传统Shadowsocks/V2Ray三类翻墙协议横向实测对比，覆盖多城市多运营商晚高峰数据，附协议选择建议。"
-image: /assets/images/covers/vpn-2026.svg
+image: /assets/images/covers/vpn-protocol-comparison-2026.webp
 faq:
   - q: "协议和 VPN 品牌，到底哪个更重要？"
     a: "2026 年是协议优先。同一个品牌如果新旧协议混用，老协议节点照样大面积失效；反过来一个不知名品牌只要用对协议，稳定性可能碾压大牌老协议节点。"

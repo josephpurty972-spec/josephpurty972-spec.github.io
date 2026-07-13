@@ -6,7 +6,7 @@ categories: [科学上网]
 tags: [免费梯子, 手机VPN, 安卓VPN, iPhone VPN, 科学上网教程]
 excerpt: "手机搜'免费梯子'下载，十个链接里大半是坑。实测踩过的雷和一套自查清单，装之前先看这篇。"
 description: "2026年手机免费梯子VPN下载安装避坑指南，覆盖安卓APK来源风险、iOS描述文件安装陷阱、权限自查清单，附全平台安全安装步骤。"
-image: /assets/images/covers/vpn-2026.svg
+image: /assets/images/covers/mobile-free-vpn-download-guide-2026.webp
 howto:
   name: "手机免费梯子VPN安全自查安装流程"
   description: "2026年安卓/iPhone下载安装免费梯子VPN前的安全自查步骤"

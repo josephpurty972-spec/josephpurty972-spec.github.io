@@ -6,7 +6,7 @@ categories: [科学上网]
 tags: [免费梯子, 免费VPN, 科学上网, VPN测评, 数据安全]
 excerpt: "免费梯子看着省钱，实测下来连接成功率、隐私风险和付费差距很大。5类常见免费方案实测数据在这里。"
 description: "2026年免费梯子VPN实测：免费机场、浏览器插件、限量免费套餐、山寨免费APP四类方案的连接成功率、DNS泄漏、隐私风险实测对比，附能不能长期用的建议。"
-image: /assets/images/covers/ladder-vpn-2026.svg
+image: /assets/images/covers/free-ladder-vpn-test-2026.webp
 faq:
   - q: "免费梯子VPN到底能不能用？"
     a: "临时应急、访问非敏感内容可以短期用，但连接成功率低、隐私风险高，不建议长期依赖，尤其不要用来登录重要账号或处理工作内容。"
