@@ -6,7 +6,7 @@ tags: [VPN, ChatGPT, Claude, 중국, 방화벽, 안정성, IEPL]
 lang: ko
 excerpt: "2026년 4월 방화벽 업데이트 이후 중국에서 AI 도구 접속 안정성이 크게 달라졌습니다. 직접 3개 도시, 2개 통신사로 2개월간 실측한 결과를 공유합니다."
 description: "2026년 중국 방화벽 환경에서 VPN 실측 비교: ChatGPT, Claude, YouTube 접속 안정성, 피크 시간대 성능, 프로토콜별 특성 분석. 3개 도시 직접 테스트."
-image: /assets/images/covers/vpn-2026.svg
+image: /assets/images/covers/ko-vpn-china-chatgpt-test-2026.webp
 ---
 
 2026년 4월, 중국 방화벽이 또 한 번 대규모 업데이트를 단행했습니다. 이전까지 잘 작동하던 많은 VPN들이 갑자기 불안정해지거나 완전히 차단되었고, 특히 AI 도구 접속 상황이 크게 바뀌었습니다.
