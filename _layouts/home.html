@@ -100,42 +100,14 @@ layout: default
 {% endcase %}
 
 <section class="hero">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" class="hero__img" role="img" aria-label="{{ h_title }}">
-    <defs>
-      <linearGradient id="jp-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1427"/><stop offset="0.6" stop-color="#132040"/><stop offset="1" stop-color="#0e2a28"/></linearGradient>
-      <radialGradient id="jp-g1" cx="0.8" cy="0.15" r="0.65"><stop offset="0" stop-color="#2f6df6" stop-opacity="0.4"/><stop offset="1" stop-color="#2f6df6" stop-opacity="0"/></radialGradient>
-      <radialGradient id="jp-g2" cx="0.15" cy="0.85" r="0.55"><stop offset="0" stop-color="#18b187" stop-opacity="0.3"/><stop offset="1" stop-color="#18b187" stop-opacity="0"/></radialGradient>
-      <linearGradient id="jp-acc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f6df6"/><stop offset="1" stop-color="#18b187"/></linearGradient>
-    </defs>
-    <rect width="1600" height="400" fill="url(#jp-bg)"/>
-    <rect width="1600" height="400" fill="url(#jp-g1)"/>
-    <rect width="1600" height="400" fill="url(#jp-g2)"/>
-    <g stroke="#ffffff" stroke-opacity="0.05"><path d="M0 100 H1600 M0 200 H1600 M0 300 H1600 M400 0 V400 M800 0 V400 M1200 0 V400"/></g>
-    <g transform="translate(90,118)">
-      <rect rx="20" width="320" height="40" fill="#2f6df6" fill-opacity="0.14" stroke="#2f6df6" stroke-opacity="0.5"/>
-      <circle cx="26" cy="20" r="7" fill="#18b187"/>
-      <text x="44" y="26" fill="#d0deff" font-size="18" font-weight="600" font-family="'Poppins','Noto Sans SC',-apple-system,sans-serif">{{ h_badge }}</text>
-    </g>
-    <text x="88" y="228" fill="#ffffff" font-size="58" font-weight="800" font-family="'Poppins','Noto Sans SC',-apple-system,sans-serif">{{ h_title }}</text>
-    <text x="90" y="286" fill="#b8ccf0" font-size="26" font-weight="600" font-family="'Poppins','Noto Sans SC',-apple-system,sans-serif">{{ h_sub }}</text>
-    <g transform="translate(90,320)">
-      <rect rx="20" width="420" height="40" fill="#18b187" fill-opacity="0.12" stroke="#18b187" stroke-opacity="0.5"/>
-      <circle cx="24" cy="20" r="6" fill="#18b187"/>
-      <text x="42" y="26" fill="#9feedd" font-size="17" font-weight="600" font-family="'Poppins','Noto Sans SC',-apple-system,sans-serif">{{ h_note }}</text>
-    </g>
-    <g transform="translate(1310,200)" fill="none">
-      <circle r="150" stroke="url(#jp-acc)" stroke-width="2" stroke-opacity="0.4"/>
-      <circle r="100" stroke="#2f6df6" stroke-width="1.5" stroke-opacity="0.35"/>
-      <circle r="55" stroke="#18b187" stroke-width="1.5" stroke-opacity="0.4"/>
-      <line x1="-150" y1="0" x2="150" y2="0" stroke="#2f6df6" stroke-width="1" stroke-opacity="0.2"/>
-      <line x1="0" y1="-150" x2="0" y2="150" stroke="#2f6df6" stroke-width="1" stroke-opacity="0.2"/>
-      <circle cx="150" cy="0" r="10" fill="#2f6df6"/>
-      <circle cx="-106" cy="-106" r="8" fill="#18b187"/>
-      <circle cx="0" cy="100" r="6" fill="#9fb3d6"/>
-      <circle r="20" fill="#0d1427" stroke="url(#jp-acc)" stroke-width="2.5"/>
-      <circle r="7" fill="#2f6df6"/>
-    </g>
-  </svg>
+  <img class="hero__bg" src="{{ '/assets/images/hero-bg.webp' | relative_url }}" alt="" width="1600" height="400">
+  <div class="hero__scrim"></div>
+  <div class="hero__content">
+    <span class="hero__badge"><span class="hero__dot"></span>{{ h_badge }}</span>
+    <h1 class="hero__title">{{ h_title }}</h1>
+    <p class="hero__sub">{{ h_sub }}</p>
+    <span class="hero__note"><span class="hero__note-dot"></span>{{ h_note }}</span>
+  </div>
 </section>
 
 <div class="lead">{{ content }}</div>
